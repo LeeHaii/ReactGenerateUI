@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Popup from "../Popup/Popup";
 
 function SinglePanel({users}){
-  const [isPopupOpen, setPopupOpen] = useState(false);
-  const [selectedUser, setSelectedUser] = useState(null);
+  const [isPopupOpen, setPopupOpen] = useState(false)
+  const [selectedUser, setSelectedUser] = useState(null)
 
   const openPopup = (user) => {
     setSelectedUser(user);
@@ -14,6 +14,8 @@ function SinglePanel({users}){
     setSelectedUser(null);
     setPopupOpen(false);
   };
+
+  
 
   return (
     <>

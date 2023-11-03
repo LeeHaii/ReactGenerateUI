@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Brandon from './assets/brandon.jpg'
 import './App.css'
 import SinglePanel from './assets/SinglePanel/SinglePanel'
+import Rizz from './assets/PopupRizz/Rizz'
+import Video from './assets/Video.mp4'
 
 let users = [{
   name: 'John',
@@ -62,8 +64,28 @@ let users = [{
 }]
 
 function App() {
+  const [isRizzOpen, setRizzOpen] = useState(false);
+  const openRizz = () => {
+    setRizzOpen(true);
+  }
 
-  return <SinglePanel users={users} />
+  const closeRizz = () => {
+    setRizzOpen(false);
+  }
+
+  return (
+    <>
+      <SinglePanel users={users} />
+      <div>Secret Button</div>
+      <button onClick={() => openRizz()}>OwO</button>
+      <Rizz isOpen={isRizzOpen} onClose={closeRizz} content={
+        <div>
+          <h2>Rim siêu thương otry !!!! </h2>
+          <video src={Video} controls></video>
+        </div>
+      } />
+    </>
+  )
 }
 
 export default App

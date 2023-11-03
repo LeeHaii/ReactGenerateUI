@@ -1,0 +1,81 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.FriendSuggestion{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Define columns with a minimum width of 250px and let them fill the available space */
+  gap: 30px; /* Gap between items */
+  justify-items: center;
+}
+
+.txtHeader{
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.FriendContainer{
+  background-image: linear-gradient(45deg, purple, blue);
+  border-radius: 10px;
+  padding: 7px;
+  color: white;
+}
+
+.FriendContainer > button{
+  background-color: white;
+  border: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 7px;
+}
+
+@media (max-width: 768px) {
+  .FriendSuggestion {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust the minimum width and number of columns as needed */
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  z-index: 101;
+  color: black;
+}
+.popup-content-wrap{
+  display: flex;
+  flex-direction: row;
+}
+
+.popup-content > button{
+  background-color: rgb(235, 235, 235);
+  width: 100px;
+  height: 30px;
+  border-radius: 7px;
+  border: none;
+  color: black;
+  
+}
+
+.popup-content > button:hover{
+  background-image: linear-gradient(45deg, purple, blue);
+}
+
